@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div id='iitgn-logo' style="position:absolute; top:10px; left:20px; z-index:1">
+        <img src="http://upload.wikimedia.org/wikipedia/en/a/a2/IIT_Gandhinagar_Logo.svg" alt="IITGN Logo" height="100" width="100">
+</div>
+</head>
+<body>
+<h1 align = "center">Institute Energy Management System</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--
+<form action="date_select"  style="text-align: center;">
+<p> <b> Let's get started </b> </p>
+  <p> <b> Click on Submit button </b> </p>
+
+  <input type="Submit">
+</form>
+-->
+
+<%= form_tag(:action => 'date_select') do %>
+<p> <b> Let's get started </b> </p>
+  <p> <b> Click on Submit button </b> </p>
+<%= submit_tag("Submit") %>
+<% end %>
+
+</body>
+</html>

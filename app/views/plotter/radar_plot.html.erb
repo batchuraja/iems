@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Radar Plots</title>
+        <script type="text/javascript" src="Chart.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    </head>
+
+    <body onLoad="init()">
+        <script type="text/javascript">
+            window.onLoad = function() {
+                init();
+            };
+
+            function init() {
+                var ctx = $("#jan").get(0).getContext("2d");
+                var data = {
+                    labels: ["Shed 1","Shed 2","Shed 3","Shed 4","L block","A block"],
+                    datasets: [
+                        {
+                            fillColor : "rgba(220,220,220,0.5)",
+                            strokeColor : "rgba(220,0,0,1)",
+                            pointColor : "rgba(220,0,0,1)",
+                            pointStrokeColor : "#fff",
+                            data: [65, 59, 90, 81, 56, 55]
+                        },
+
+                        {
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            data: [28, 48, 40, 19, 96, 27]
+                        }
+                    ]
+                }
+
+                var myNewChart = new Chart(ctx).Line(data);
+                var ctx = $("#feb").get(0).getContext("2d");
+                var data = {
+                    labels: ["Shed 1","Shed 2","Shed 3","Shed 4","L block","A block"],
+                    datasets: [
+                        {
+                            fillColor : "rgba(220,220,220,0.5)",
+                            strokeColor : "rgba(220,0,0,1)",
+                            pointColor : "rgba(220,0,0,1)",
+                            pointStrokeColor : "#fff",
+                            data: [65, 59, 90, 81, 56, 55]
+                        },
+
+                        {
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            data: [28, 48, 40, 19, 96, 27]
+                        }
+                    ]
+                }
+
+                var myNewChart = new Chart(ctx).Radar(data);
+
+                ctx = $("#mar").get(0).getContext("2d");
+                data = {
+                    labels: ["Shed 1","Shed 2","Shed 3","Shed 4","L block","A block"],
+                    datasets: [
+                        {
+                            fillColor : "rgba(220,220,220,0.5)",
+                            strokeColor : "rgba(220,0,0,1)",
+                            pointColor : "rgba(220,0,0,1)",
+                            pointStrokeColor : "#fff",
+                            data: [65, 59, 90, 81, 56, 55]
+                        },
+
+                        {
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            data: [28, 48, 40, 19, 96, 27]
+                        }
+                    ]
+                }
+
+                myNewChart = new Chart(ctx).Radar(data);
+
+                ctx = $("#apr").get(0).getContext("2d");
+                data = {
+                    labels: ["Shed 1","Shed 2","Shed 3","Shed 4","L block","A block"],
+                    datasets: [
+                        {
+                            fillColor : "rgba(220,220,220,0.5)",
+                            strokeColor : "rgba(220,0,0,1)",
+                            pointColor : "rgba(220,0,0,1)",
+                            pointStrokeColor : "#fff",
+                            data: [65, 59, 90, 81, 56, 55]
+                        },
+
+                        {
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,1)",
+                            pointColor: "rgba(151,187,205,1)",
+                            pointStrokeColor: "#fff",
+                            data: [28, 48, 40, 19, 96, 27]
+                        }
+                    ]
+                }
+
+                myNewChart = new Chart(ctx).Radar(data);
+            }
+        </script>
+        <h1 align = "center">Institute Energy Management System</h1>
+        <br>
+        <h3 align = 'center'>Energy consumption</h3>
+        <br>
+        <p> <center> <b>January 2014 </p>
+
+        <canvas id="jan" height="400" width= "1100" ></canvas>
+        <p> February 2014 </p>
+        <canvas id="feb" height="400" width= "1100" ></canvas>
+        <p> March 2014 </p>
+        <canvas id="mar" height="400" width= "1100" ></canvas>
+        <p> April 2014 </p>
+        <canvas id="apr" height="400" width= "1100" ></canvas>
+    </body>
+
+</html>
